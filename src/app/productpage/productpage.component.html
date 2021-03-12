@@ -1,0 +1,28 @@
+<h1>productpage works!</h1>
+<div class="product">
+    <!-- enter name : <input placeholder="name" [(ngModel)]="iname"><br>
+    enter price : <input placeholder="price" [(ngModel)]="oprice"><br> -->
+    <div class="new">
+        <button (click)="NewRow()">New</button>
+    </div>
+    <!-- <input type="date" [ngModel] ="dateArrival | date:'yyyy-MM-dd'" (ngModelChange)="dateArrival = $event"> -->
+
+    <table border="1">
+        <tr>
+            <th>S.NO</th>
+            <th>date</th>
+            <th>Billno</th>
+            <th>Amount</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let q of list ;let i  =index">
+            <td>{{i+1}}</td>
+            <td> <input type="date" [ngModel]="date|date:'yyyy-MM-dd'">
+            </td>
+            <td>{{i+1}}</td>
+            <td>{{sum()}}</td>
+            <td><button (click)="delete(q)">DELETE</button></td>
+        </tr>
+    </table>
+</div>
+<!-- <router-outlet></router-outlet> -->

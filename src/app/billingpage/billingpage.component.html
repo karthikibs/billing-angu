@@ -1,0 +1,42 @@
+<h1>billingpage works!</h1>
+<div class="billingpg">
+    <!-- <img src=".././../assets/img/pic5.jpg"> -->
+    <div class="billno"></div>
+        <button class="billno"> Billno </button>
+        <!-- </div>
+    <div class="billdel"> -->
+        <!-- <button class="billdel"> Billdel </button> -->
+        <td><button (click)="delete(list)">billdel</button></td>
+    </div>
+    <table border="1">
+        <tr>
+            <th>product</th>
+            <th>price</th>
+            <th>qty</th>
+            <th>total</th>
+        </tr>
+        <tr *ngFor="let i of list " >
+            <td>
+                <select onchange="">
+                    <option *ngFor="let q of list ">
+                        {{q.items}}
+                    </option>
+                </select>
+            </td>
+            <td>
+                <!-- <select>
+                <option *ngFor="let q of list ">
+                    {{q.price}}
+                </option>
+            </select> -->
+            </td>
+            <td> <input type="number" [(ngModel)]="qty"> </td>
+            <td>{{price * qty}}</td>
+        </tr>
+    </table>
+    <button (click)="addRow()">Add row</button>
+    <!-- <button class="gtotal">gtotal</button> -->
+    <!-- <div class="save">
+        <button class="save">SAVE</button>
+    </div> -->
+    <!-- <button (click)="sum()">sum</button> -->

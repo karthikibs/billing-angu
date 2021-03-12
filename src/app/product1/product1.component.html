@@ -1,0 +1,36 @@
+<p>product1 works!</p>
+    <div *ngIf="true" class="bill">
+      <h1> BILLING SOFTWARE </h1>
+      Enter product name : <input placeholder="items" [(ngModel)]="fitems"><br>
+      <!-- Enter quantity : <input type="number" [(ngModel)]="gnumber"><br> -->
+      Enter price : <input placeholder="price" [(ngModel)]="hprice"><br>
+      <button (click)="save()" class="add"> ADD </button>
+      <table border="1">
+        <tr>
+          <th>S.NO</th>
+          <th>ITEMS</th>
+          <th>PRICE</th>
+          <!-- <th>QTY</th> -->
+          <!-- <th>TOTAL</th> -->
+          <th>ACTION</th>
+        </tr>
+        <tr *ngFor="let q of list ;let i=index">
+          <td>{{i+1}}</td>
+          <td>{{q.items}}</td>
+          <td>{{q.price}}</td>
+          <!-- <td> <input type="number" [(ngModel)]="qty"> </td> -->
+          <!-- <td>{{q.price* qty}}</td> -->
+          <td><button (click)="delete(q)">DELETE</button></td>
+          <!-- <a class="btn" ng-click="remove(item)">Delete</a> -->
+          <!-- <td><input type="button" ng-click="Remove($index)" value="Remove" /></td> -->
+        </tr>
+      </table>
+      <!-- <button (click)="sum()">sum</button> -->
+      <span>{{add}}</span>
+      <!-- <span>now() | date:'yyyy-MM-dd'}}</span> -->
+    </div>
+    <!-- <app-billinglist></app-billinglist>
+    <app-homepage></app-homepage>
+    <app-productpage></app-productpage>
+    <app-billingpage></app-billingpage> -->
+   

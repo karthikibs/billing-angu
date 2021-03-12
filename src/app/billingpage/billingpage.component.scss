@@ -1,0 +1,30 @@
+// .billingpg{
+//   background-image: url("../assets/img/pic8.jpg");
+// }
+*{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+  .example-full-width {
+    width: 200px;
+  }
+  button {
+    margin-left: 20px;
+  }
+  
+.billno{
+    display: flex;
+    margin-right: 10%;
+}
+.billdel{
+    display:inline-flex;
+    margin-left: 10%;
+}
+.gtotal{
+  display: flex;
+  margin-left: 25;
+}
+.save{
+  display: flex;
+  margin-left: 10%;
+}
